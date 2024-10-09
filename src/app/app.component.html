@@ -1,0 +1,31 @@
+<mat-toolbar>
+  <span>
+    Sorting Arrays
+  </span>
+  <button mat-raised-button (click)="generateUniqueRandomNumbers(); currentState='mergeSort'">
+    Merge Sort
+  </button>
+  <button mat-raised-button (click)="generateUniqueRandomNumbers(); currentState='quickSort'">
+    Quick Sort
+  </button>
+</mat-toolbar>
+
+<div *ngIf="randomNumbers && randomNumbers.length" class="number-container">
+  <h3>Your generated numbers are:</h3>
+  <div *ngFor="let number of randomNumbers; let i = index" class="number-item" [ngClass]="{'highlight': i === compareIndex1 || i === compareIndex2}">
+    <span class="number-text">{{ number }}</span>
+    <div class="line" [style.width.%]="(number / 40) * 100"></div>
+  </div>  
+  
+  <button mat-raised-button (click)="beginMergeSorting()" *ngIf="currentState === 'mergeSort'">
+    Begin Merge Sorting
+  </button>
+  
+  <button mat-raised-button (click)="beginQuickSorting()" *ngIf="currentState === 'quickSort'">
+    Begin Quick Sorting
+  </button>
+
+  <button mat-raised-button (click)="generateUniqueRandomNumbers()" *ngIf="currentState !== ''">
+    Generate new numbers
+  </button>
+</div>

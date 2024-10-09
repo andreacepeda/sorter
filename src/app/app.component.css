@@ -1,0 +1,32 @@
+.number-container {
+    padding: 10px;
+}    
+    
+h3 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #1D1A1D;
+}
+  
+.number-item {
+    display: flex;
+    align-items: center;
+    margin-bottom:
+}
+  
+.number-text {
+    width: 40px;
+    text-align: center; 
+    margin-right: 10px;
+    color: #1D1A1D;
+    padding: 5px;
+}
+  
+.line {
+    height: 10px;
+    background-color: #8ACE00;
+}
+
+.highlight {
+    background-color: rgb(228, 133, 216);
+  }
